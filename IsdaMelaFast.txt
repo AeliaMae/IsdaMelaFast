@@ -116,6 +116,22 @@ task.spawn(function()
     end
 end)
 
+local NewRod = LocalPlayer.Character:FindFirstChildWhichIsA('Tool')
+
+if NewRod and NewRod.Name:lower():find('rod') then
+    Rod = NewRod
+end
+
+if not UserInputService.KeyboardEnabled then
+    ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind, Enum.UserInputType.Keyboard)
+    ContextActionService:SetTitle('ToggleFarm', 'Toggle Farm')
+    ContextActionService:SetPosition('ToggleFarm', UDim2.new(0, 0, 0, 0))
+    ShowNotification('Press the onscreen button to enable/disable')
+else
+    ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
+    ShowNotification(`Press '{Keybind.Name}' Dumbo`)
+end
+end)
 
 
 window:Label("Press M Dumbo", Color3.fromRGB(127, 143, 166))
