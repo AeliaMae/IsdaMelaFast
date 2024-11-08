@@ -126,7 +126,7 @@ if not UserInputService.KeyboardEnabled then
     ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind, Enum.UserInputType.Keyboard)
     ContextActionService:SetTitle('ToggleFarm', 'Toggle Farm')
     ContextActionService:SetPosition('ToggleFarm', UDim2.new(0, 0, 0, 0))
-    ShowNotification('Press "M" Dumbo')
+    ShowNotification('Press M Dumbo')
 else
     ContextActionService:BindAction('ToggleFarm', ToggleFarm, false, Keybind)
     ShowNotification(`Press '{Keybind.Name}' Dumbo`)
@@ -134,7 +134,7 @@ end
 end)
 
 
-window:Label("Press "M" Dumbo", Color3.fromRGB(127, 143, 166))
+window:Label("Press M Dumbo", Color3.fromRGB(127, 143, 166))
 
 
 
