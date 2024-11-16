@@ -96,7 +96,7 @@ task.spawn(function()
         if Enabled and not Progress then
             if Rod then
                 Progress = true
-                task.wait(0.73)
+                task.wait(2.73)
                 Rod.events.reset:FireServer()
                 Rod.events.cast:FireServer(100.5)
             end
